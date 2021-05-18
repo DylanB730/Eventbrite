@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eventbrite</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <style>
+      body {
+        background-color: #fef555;
+      }
+    </style>    
+
+  </head>
+
+  <body>
+    <%= yield %>
+
+
+
+  </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eventbrite</title>
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+  <style>
+    body {
+      background-color: #e8ded1;
+    }
+  </style>    
+
+  </head>
+
+  <body>
+    <%= yield %>
+
+  <!-- Navbar -->
+    <div class="bg-dark fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="col navbar navbar-expand-lg navbar-dark">
+            <h4 class="mr-4 mt-2 py-1"><%= link_to "Eventbrite", root_path, class: "text-light font-weight-bold ml-3" %></h4>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarContent" class="collapse navbar-collapse justify-content-between">
+              <ul class="navbar-nav mt-1">
+                <li class="nav-item active mr-4">
+                  <%= link_to "Accueil", root_path, class:"text-light" %>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar -->
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+    <script>
+
+    // document.body.style.background = "#"+((1<<24)*Math.random()|0).toString(16);
+    </script>
+
+
+  </body>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <%= javascript_include_tag 'application', async: Rails.env.production?, :cache => 'cached/all' %>
+
+</html>
