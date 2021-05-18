@@ -1,14 +1,10 @@
-class Attendance < ApplicationRecord
-  after_create :report_admin_send
-
-  belongs_to :guest, class_name: "User"
+class Attendance < ApplicationRecord  
+  belongs_to :attendee, class_name: "User", foreign_key: "stripe_customer_id"
   belongs_to :event
 
+  after_create :attendance_created
 
-
-  def report_admin_send
-    AdminMailer.report_admin_email(self.event.admin).deliver_now
+  def attendance_created
+    UserMailer.attendance_email(self).deliver_now
   end
-
-
 end
